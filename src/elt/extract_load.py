@@ -9,6 +9,7 @@ from model.keywords_model import Keywords
 from tqdm import tqdm
 import argparse
 import logging
+import pickle
 
 logging.basicConfig(level=logging.INFO)
 
@@ -110,9 +111,6 @@ if __name__=='__main__':
   num_page = args.num_page
   batch_size = args.batch_size
 
-  # Initialize set to avoid duplicates
-  unique_movie_ids = set()
-
   batch_rows = []
 
 
@@ -122,12 +120,6 @@ if __name__=='__main__':
     movies = fetch_popular_movies(base_url, headers, page=page)
  
     for m in tqdm(movies, desc=f"Processing page {page}", leave=False):
-
-      # Skip duplicates
-      if m.id in unique_movie_ids:
-        continue
-      
-      unique_movie_ids.add(m.id)
       credits = fetch_credits(base_url, headers, m.id)
       genres = fetch_genres(base_url, headers, m.id)
       keywords = fetch_keywords(base_url, headers, m.id)
