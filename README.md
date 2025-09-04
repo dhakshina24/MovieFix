@@ -13,14 +13,6 @@ MovieFix is a scalable and end-to-end movie recommendation system that leverages
 This project uses movie metadata and content from the [TMDB (The Movie Database) API](https://www.themoviedb.org/documentation/api) as its primary data source. 
 
 
-## Key Features 
-- Scalable Vector Search using Pinecone
-- Lightweight system with quantized Llama - 2 model 
-- End-to-End Pipeline
-- Evaluation Pipeline for measuring response quality and chunk relevance.
-- Modular design 
-
-
 ## Key Features
 - Batch Extraction: Fetches movie data from TMDB API.
 - Seamless Loading: Stores raw data efficiently in CSV format.
