@@ -2,6 +2,10 @@
 MovieFix is a scalable and end-to-end movie recommendation system that leverages semantic embeddings to deliver personalized movie suggestions. It extracts and processes movie data from the TMDB API, generates embeddings using a Sentence Transformer, and uses FAISS for fast similarity search. The system features an interactive Streamlit web app, allowing users to discover movies based on storyline and semantic similarity rather than generic ratings.
 
 
+## Live Demo
+Try MovieFix in Action - [https://moviefix-wwbhgya5fgxfyj5q7dkzuf.streamlit.app/](https://moviefix-wwbhgya5fgxfyj5q7dkzuf.streamlit.app/)
+
+
 ## Tech Stack 
 - Python: pandas, NumPy, requests (for REST API)
 - HuggingFace: Sentence Transformer
