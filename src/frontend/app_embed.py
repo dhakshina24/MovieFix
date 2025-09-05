@@ -27,11 +27,11 @@ def fetch_poster(movie_id):
 
   # Auth
   # Load .env file
-  load_dotenv()
+  # load_dotenv()
 
   # Get API Key
   # API = os.getenv("TMDB_API")
-  API = st.secrets["TMDB_API"]['header']
+  API = st.secrets["TMDB_API"]["header"]
 
   headers = {
     "accept": "application/json",
